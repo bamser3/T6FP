@@ -15,7 +15,6 @@ QUESTIONS_FILE = os.path.join(os.path.dirname(__file__), "..", "attached_assets"
 
 app = create_app()
 
-
 def seed_if_needed():
     with app.app_context():
         db.create_all()
@@ -36,7 +35,6 @@ def seed_if_needed():
                 print(f"Seeded {len(questions_data)} flashcard questions")
             except Exception as e:
                 print(f"Warning: could not seed questions: {e}")
-
 
 seed_if_needed()
 
